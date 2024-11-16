@@ -93,8 +93,7 @@ def index():
     <body>
         <header>
             <div class="logo">
-                <!-- Space for the logo -->
-                <img src="">
+                <img src="your-logo-path.png" alt="Logo" />
             </div>
             <h1>DOSS Mediatech - Capture & Upload</h1>
             <div></div>
@@ -130,6 +129,7 @@ def index():
             navigator.mediaDevices.getUserMedia({ video: true })
                 .then(stream => {
                     video.srcObject = stream;
+                    console.log("Video stream started");
                 })
                 .catch(err => {
                     console.error('Error accessing the camera: ', err);
@@ -147,7 +147,7 @@ def index():
                 canvas.height = video.videoHeight;
                 context.filter = currentFilter;
                 context.drawImage(video, 0, 0, canvas.width, canvas.height);
-                capturedImage = canvas.toDataURL('image/png');  // Save image as base64
+                capturedImage = canvas.toDataURL('image/png');
                 console.log('Image captured');
             }
 
@@ -175,7 +175,6 @@ def index():
                 });
             }
         </script>
-        <!-- Bootstrap 5 JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     </html>
