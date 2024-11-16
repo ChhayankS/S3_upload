@@ -94,7 +94,7 @@ def index():
         <header>
             <div class="logo">
                 <!-- Space for the logo -->
-                <img src="https://i.postimg.cc/WbsKPNZ0/temp-Imager-WOd-Kx.avif" alt="DOSS Logo">
+                <img src="">
             </div>
             <h1>DOSS Mediatech - Capture & Upload</h1>
             <div></div>
@@ -176,7 +176,7 @@ def index():
             }
         </script>
         <!-- Bootstrap 5 JS -->
-        <script src=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     </html>
     """
@@ -201,4 +201,4 @@ def upload_image():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5037, use_reloader=False)
+    app.run(debug=True, port=5030, use_reloader=False)
